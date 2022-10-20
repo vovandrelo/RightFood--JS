@@ -1,0 +1,22 @@
+extends ../layouts/main.pug
+include ../include.pug
+
+block title
+    title RightFood
+
+block nav
+    +navBar()
+        +container()
+            +navBar__logo()
+                +navBar__logo-img()
+            +navBar__menu()
+                +navBar__menu-item()
+                +navBar__menu-item()
+                +navBar__menu-item()
+                +navBar__menu-item()
+                +navBar__menu-item()
+            +navBar__menu-login()
+
+block content
+
+block footer

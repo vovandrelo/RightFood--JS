@@ -1,0 +1,46 @@
+extends ../layouts/main.pug
+include ../include.pug
+
+block title
+    title RightFood - Рецепты
+
+block content
+    +enegryValue()
+        +container()
+            +title("Расчёт индивидуальной нормы КБЖУ", "title_size-m mt-4")
+            +enegryValue__descr("Самый простой способ избавления от лишнего веса — это питание с дефицитом калорий. Но для этого нужно знать свою норму, а подсчитать ее самостоятельно не всегда просто.", "mt-4")
+            +enegryValue__descr("Предлагаем вам онлайн-калькулятор для расчета калорий, белков, углеводов и жиров, благодаря которому вы сможете в несколько кликов узнать свою норму КБЖУ. Вам нужно ввести свой вес, рост, возраст, пол, коэффициент физической активности и вы получите готовые значения калорий и готовые значения БЖУ, которым и нужно следовать.", "mt-4")
+            +row("d-flex justify-content-center mt-4")
+                +input-data("Текущий вес", "user-weight", "col-2 input-data_size-s mx-2")
+                +input-data("Возраст", "user-age", "col-2 input-data_size-s mx-2")
+                +input-data("Рост", "user-height", "col-2 input-data_size-s mx-2")
+                +pop-up-menu("col-2 p-0 mx-2")
+                    +input-data("Пол", "user-gender", "input-data_size-s col-12")
+                    +pop-up-menu__list("pop-up-menu__list_dark")
+                        +pop-up-menu__list-item("Мужской", "pop-up-menu__list-item_light")
+                        +pop-up-menu__list-item("Женский", "pop-up-menu__list-item_light")
+                        +pop-up-menu__list-item("Иной", "pop-up-menu__list-item_light")
+            +row("d-flex justify-content-center mt-4")
+                +pop-up-menu("col-3 p-0")
+                    +input-data("Коэффициент активности", "user-active", "input-data_size-s col-12")
+                    +pop-up-menu__list("pop-up-menu__list_dark")
+                        +pop-up-menu__list-item("Минимальный", "pop-up-menu__list-item_light")
+                        +pop-up-menu__list-item("Нормальный", "pop-up-menu__list-item_light")
+                        +pop-up-menu__list-item("Повышенный", "pop-up-menu__list-item_light")
+                        +pop-up-menu__list-item("Максимальный", "pop-up-menu__list-item_light")
+                +pop-up-menu("col-3 p-0 mx-4")
+                    +input-data("Цели", "user-purp", "input-data_size-s col-12")
+                    +pop-up-menu__list("pop-up-menu__list_dark")
+                        +pop-up-menu__list-item("Набор массы", "pop-up-menu__list-item_light")
+                        +pop-up-menu__list-item("Поддержание веса", "pop-up-menu__list-item_light")
+                        +pop-up-menu__list-item("Похудение", "pop-up-menu__list-item_light")
+                +button("#", "save-energyValue", "Сохранить", "col-2 button_size-s theme-light")
+
+            +row()
+                +enegryValue__result("d-flex justify-content-center align-items-center mt-4")
+                    +enegryValue__descr("С учётом указанных выше данных дневная норма калорий составляет:")
+                    +input-data("Подсчёт...", "result", "col-1 input-data_size-xs mx-2")
+                    +enegryValue__descr("Ккал")
+            +row()
+                +enegryValue__ratio("d-flex justify-content-center mt-4")
+                    +enegryValue__descr()

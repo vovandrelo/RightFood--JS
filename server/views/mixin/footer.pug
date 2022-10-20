@@ -1,0 +1,15 @@
+include ../include.pug
+
+mixin footer
+    +footerPage("mt-5")
+        +footerPage__info("footerPage__block")
+            +title("Right Food", "title_size-l")
+            +footerPage__info-descr("Ждём ваши предложения и пожелания:")
+            +footerPage__info-descr-imp("email: rightfood@mail.ru")
+            +footerPage__info-descr-imp("tel.: 88005553535")
+        +footerPage__email("footerPage__block")
+            +title("Подписаться на рассылку", "title_size-s")
+            +footerPage__email-block("Введите ваш email")
+        +footerPage__socNet("footerPage__block")
+            +title("Следите за нам в соц. сетях", "title_size-s")
+            +footerPage__socNet-block()

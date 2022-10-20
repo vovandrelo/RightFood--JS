@@ -1,0 +1,17 @@
+extends ../layouts/main.pug
+include ../include.pug
+
+block title
+    title RightFood - Вход
+
+
+block content
+    +login()
+        +container()
+            +title("Вход", "title_size-m mt-5")
+            +row("d-flex justify-content-center")
+                +client-form("login", "col-8")
+                    +client-form__input("text", "login", "Введите логин")
+                    +client-form__input("password", "pass", "Введите пароль")
+                    +client-form__btn("Войти")
+                    +client-form__sec-btn("/auth/registr", "Зарегистрироваться", "client-form__btn_secondary")

@@ -1,0 +1,18 @@
+include ../include.pug
+
+mixin nav
+    +navBar()
+        +container()
+            +navBar__content()
+                +navBar__logo()
+                +navBar__menu()
+                    +navBar__menu-item()
+                        +navBar__link("/", "main", "Главная")
+                    +navBar__menu-item()
+                        +navBar__link("/products", "products", "Продукты")
+                    +navBar__menu-item()
+                        +navBar__link("/recipes/all", "recipes", "Рецепты")
+                    +navBar__menu-item()
+                        +navBar__link("/enegryValue", "calc", "Расчёт КБЖУ")
+                +navBar__login()
+                        +navBar__link("/auth/login", "auth", "Войти")

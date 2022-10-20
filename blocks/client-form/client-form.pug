@@ -1,0 +1,3 @@
+mixin client-form(formType, mixAndMod = "")
+    form.client-form(action="/auth/registr", method="post", data-formType=formType, class=mixAndMod)
+        block

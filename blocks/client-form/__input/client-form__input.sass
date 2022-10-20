@@ -1,0 +1,21 @@
+.client-form__input
+    width: 100%
+    display: block
+    background: $lightGrey
+    border: none
+    border-bottom: 2px solid $green
+    height: 42px
+    padding: 0 20px
+    line-height: 0.8px
+    font-size: 22px
+    font-weight: 300
+    margin-top: 40px
+    transition-duration: 0.5s
+    &::placeholder
+        color: $darkGrey
+    &:hover::placeholder
+        cursor: pointer
+        color: $green
+        transition-duration: 1s
+    &:focus
+        outline: none
